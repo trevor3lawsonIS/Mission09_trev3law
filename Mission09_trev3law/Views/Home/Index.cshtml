@@ -1,8 +1,17 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@model BooksViewModel
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+@foreach (Book b in Model.Books)
+            {
+                <h3>@b.Title</h3>
+                <br />
+            }
+
+
+<div page-nav="@Model.PageInfo" page-action="Index"></div>
+
