@@ -17,7 +17,7 @@ namespace Mission09_trev3law.Components
 
         public IViewComponentResult Invoke()
         {
-            ViewBag.SelectedType = RouteData?.Values["category"];
+            ViewBag.SelectedCategory = RouteData?.Values["category"];
 
             var types = repo.Books
                 .Select(x => x.Category)
