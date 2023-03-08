@@ -4,16 +4,15 @@
 @model BooksViewModel
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
+    <h1 class="display-4 text-monospace text-primary">Welcome</h1> <!--HERE I CHANGED THE FONT AND THE COLOR OF THE WELCOME MESSAGE TO BETTER MATCH THE BUTTONS-->
 </div>
 @foreach (Book b in Model.Books)
 {
-<partial name="BookSummary" model="b" />
+    <partial name="BookSummary" model="b" />
 }
 
 
 
 <div page-nav="@Model.PageInfo" page-action="Index" page-classes-enabled="true"
      page-class="btn" page-class-normal="btn-outline-dark"
-     page-class-selected="btn-primary" class="btn-group pull-right m-1"></div>
-
+     page-class-selected="btn-primary" class="btn-group font-weight-light btn-group-lg m-1"></div>
